@@ -8,8 +8,28 @@ app = Flask(__name__)
     # return 'hello eric!'
 	
 @app.route('/')
-def show_entries():
+def show_home():
     return render_template('hero.html')
+	
+@app.route('/about/')
+def show_about():
+    return render_template('about.html')
+	
+@app.route('/resume/')
+def show_resume():
+    return render_template('resume.html')
+	
+@app.route('/misc/')
+def show_misc():
+    return render_template('misc.html')
+	
+@app.route('/contact/')
+def show_contact():
+    return render_template('contact.html')
+	
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('page_not_found.html'), 404
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
