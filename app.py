@@ -1,11 +1,15 @@
 import os
-from flask import Flask
+from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash, _app_ctx_stack
 
 app = Flask(__name__)
 
+# @app.route('/')
+# def hello():
+    # return 'hello eric!'
+	
 @app.route('/')
-def hello():
-    return 'Hello Eric!'
+def show_entries():
+    return render_template('hero.html')
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
