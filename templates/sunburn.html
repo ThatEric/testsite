@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Sunburn Survior</h1>
+        <p>Something something 555-555-5555</p>
+      </div>
+{% endblock %}
+{% block scripts %}
+<script type="text/javascript" src="/scripts/game.js" /></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+      $("#sunburnMI").addClass("active");
+    });
+  </script>
+{% endblock %}

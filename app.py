@@ -24,6 +24,10 @@ def show_misc():
 @app.route('/contact/')
 def show_contact():
     return render_template('contact.html')
+
+@app.route('/sunburn/')
+def show_sunburn():
+    return render_template('sunburn.html')
 	
 @app.errorhandler(404)
 def page_not_found(error):
